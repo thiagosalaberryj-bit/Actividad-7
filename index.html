@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de rastreador de bicicleta</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <p class="tag">Guardado local con IndexedDB</p>
+            <h1>Registro de codigo de rastreador</h1>
+            <p class="subtitle">Guarda el codigo del dispositivo de rastreo de tu bicicleta y mantenlo aunque cierres el navegador.</p>
+        </header>
+
+        <div class="form-container">
+            <label class="label" for="datoInput">Codigo del rastreador</label>
+            <div class="input-row">
+                <input type="text" id="datoInput" placeholder="Ej: BIKE-TRK-0001">
+                <button id="guardarBtn">Guardar codigo</button>
+            </div>
+            <p class="help">Se guarda en la base de datos local de este navegador.</p>
+        </div>
+
+        <h2>Codigos guardados</h2>
+        <div id="registrosContainer" class="registros-container">
+            <!-- Los registros de IndexedDB se cargarán aquí -->
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
